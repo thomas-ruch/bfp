@@ -1,0 +1,19 @@
+@use "./variables" as var;
+
+%shadow-small {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+%shadow-medium {
+  box-shadow: 10px 10px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+%shadow-large {
+  box-shadow: 10px 15px 25px 15px rgba(0, 0, 0, 0.5);
+}
+
+%text-outline {
+  color: var.$color-txt-secondary;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}

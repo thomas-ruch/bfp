@@ -1,0 +1,29 @@
+@use "../../scss/utils";
+
+.archive-card {
+  border: 2px solid utils.$color-border;
+  margin-right: 25px;
+  cursor: pointer;
+  @extend %shadow-small;
+  height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  &:hover {
+    transform: scale(1.05) translateX(10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+}

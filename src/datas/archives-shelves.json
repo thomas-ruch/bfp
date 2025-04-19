@@ -1,0 +1,20 @@
+[
+  {
+    "id": "A001",
+    "cover": "/images/archives/SS25A_tranche.png",
+    "title": "Star Trek 25th anniversary",
+    "date": "1992"
+  },
+  {
+    "id": "A002",
+    "cover": "/images/archives/RexN_tranche.jpg",
+    "title": "Rex Nebular & the cosmic Gender-Bender",
+    "date": "1992"
+  },
+  {
+    "id": "A003",
+    "cover": "/images/archives/CotL_tranche.png",
+    "title": "Robin Hood : Conquest of the Longbow",
+    "date": "2018"
+  }
+]

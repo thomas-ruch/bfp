@@ -1,0 +1,37 @@
+@use "../../scss/utils";
+
+.icard {
+  display: flex;
+  flex-direction: column;
+  background-color: utils.$color-bg-tertiary;
+  width: 750px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 2px solid utils.$color-border;
+  @extend %shadow-small;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    object-fit: cover;
+  }
+}
+
+.icard-title {
+  font-size: utils.$font-size-title1;
+  font-family: utils.$font-primary;
+  position: absolute;
+  bottom: 20%;
+  left: 20px;
+  @extend %text-outline;
+}
+
+.icard-date {
+  position: absolute;
+  bottom: 6%;
+  left: 20px;
+  @extend %text-outline;
+}

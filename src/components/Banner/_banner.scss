@@ -1,0 +1,15 @@
+@use "../../scss/utils";
+
+.banner {
+  width: 80%;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  border-top: 3px solid utils.$color-border;
+  border-bottom: 3px solid utils.$color-border;
+  margin: 30px 0 10px 0;
+
+  img {
+    width: 83%;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../scss/utils";
+
+.custom-button {
+  background-color: utils.$color-bg-secondary;
+  border-radius: 30px;
+  border: 2px solid utils.$color-border;
+  padding: 3px 40px;
+  margin: 25px;
+  cursor: pointer;
+  @extend %shadow-small;
+
+  &:hover {
+    background-color: darken(utils.$color-bg-secondary, 10%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "A001",
+    "title": "Les coulisses de Star Trek 25th Anniversary",
+    "game": "Star Trek 25th Anniversary",
+    "date": "1992",
+    "intro": "Ce jeu marque les 25 ans de la série culte. C’est une adaptation ambitieuse qui...",
+    "mainImage": {
+      "src": "/images/archives/SS25A_tranche.png",
+      "alt": "Jaquette du jeu Star Trek 25th Anniversary"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Développé par Interplay, le jeu reprend les codes des épisodes originaux..."
+      },
+      {
+        "type": "image",
+        "src": "/images/archives/SS25A_tranche.png",
+        "alt": "Capture d’écran du pont de l’Enterprise",
+        "caption": "Le pont du vaisseau modélisé avec soin."
+      },
+      {
+        "type": "paragraph",
+        "text": "La bande-son reprend les thèmes iconiques de la série. Chaque mission est introduite par un briefing du capitaine Kirk..."
+      }
+    ]
+  }
+]

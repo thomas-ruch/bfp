@@ -1,0 +1,40 @@
+@use "../../scss/utils";
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  font-size: 20px;
+  background-color: utils.$color-bg-secondary;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer-main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    max-width: utils.$desktop-max-width;
+
+    .footer-citation {
+      font-style: italic;
+      padding-top: 5px;
+    }
+
+    .footer-legal-notice {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+}

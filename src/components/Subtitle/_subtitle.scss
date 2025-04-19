@@ -1,0 +1,12 @@
+@use "../../scss/utils";
+
+.subtitle {
+  display: block;
+  width: 750px;
+  margin: 15px 0;
+  text-align: center;
+  font-family: utils.$font-primary;
+  font-size: utils.$font-size-title1;
+  border-bottom: 2px solid utils.$color-border;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,38 @@
+//Background colors
+$color-bg-primary: #ca9d2b;
+$color-bg-secondary: #8d9b8a;
+$color-bg-tertiary: #f9f9f9;
+
+//Text colors
+$color-txt-primary: black;
+$color-txt-secondary: #ffffff;
+
+//Miscellaneous
+$color-border: #6f4b4d;
+
+//Fonts
+$font-primary: "Abril Fatface";
+$font-secondary: "Josefin Sans";
+$font-size-header: 40px;
+$font-size-title1: 36px;
+$font-size-title2: 32px;
+$font-size-body: 24px;
+
+//Screen sizes
+$desktop-max-width: 1500px;
+$small-screen-width: 768px;
+
+//Background textures
+$texture-trame: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.015) 25%,
+    transparent 25%
+  ),
+  linear-gradient(-45deg, rgba(0, 0, 0, 0.015) 25%, transparent 25%),
+  linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.015) 75%),
+  linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.015) 75%);
+
+$texture-linen: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);

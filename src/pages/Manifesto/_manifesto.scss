@@ -1,0 +1,15 @@
+#manifesto-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #manifesto-intro {
+    margin: 0 0 30px 0;
+  }
+
+  p {
+    text-align: justify;
+    padding: 0 30px;
+  }
+}
