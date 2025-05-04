@@ -9,10 +9,10 @@ function Manifesto() {
       <PageTitle title="Le manifeste du Panache" urlImage={imageBanner} />
       <div id="manifesto-intro">
         <p>
-          Le panache n’est pas, comme pourraient le prétendre certain esprits
+          Le panache n’est pas, comme pourraient le prétendre certains esprits
           chagrins, un simple ornement, une fioriture ou une coquetterie. Bien
           plus que cela, il est une attitude, un éclat, une manière d’être au
-          monde qui défie la platitude et l’ordinaire !
+          monde qui défie la platitude et l’ordinaire !
         </p>
         <p>
           Et le panache à la française alors ? Tout simplement la même chose...

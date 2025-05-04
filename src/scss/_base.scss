@@ -138,15 +138,18 @@ body {
   font-size: utils.$font-size-body;
   background-color: utils.$color-bg-primary;
   color: utils.$color-txt-primary;
+  background-image: url("/assets/textures/linen.png");
 }
 
 #main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 main {
+  flex: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -161,7 +164,22 @@ main {
   text-decoration: underline;
 }
 
+.centered {
+  margin: auto;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: unset;
+}
+
 @media (max-width: utils.$small-screen-width) {
+  body {
+    font-size: utils.$font-size-ss-body;
+  }
   .conditionnal-break {
     display: unset;
   }

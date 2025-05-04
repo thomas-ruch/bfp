@@ -36,3 +36,26 @@
   border-left: 10px solid utils.$color-border;
   padding-left: 15px;
 }
+
+@media (max-width: utils.$small-screen-width) {
+  .tcard {
+    border-radius: unset;
+    border: unset;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .tcard-title {
+    font-size: utils.$font-size-ss-title2;
+  }
+
+  .tcard-date,
+  .tcard-content {
+    font-size: utils.$font-size-ss-body;
+  }
+
+  .tcard-content {
+    border: unset;
+    padding-left: unset;
+  }
+}

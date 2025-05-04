@@ -18,10 +18,10 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-bluesky fa-2x"></i>
+            <i className="fa-brands fa-bluesky fa-2x"></i>
           </a>
           <a href="mailto:rustineman@gmail.com">
-            <i class="fa-solid fa-at fa-2x"></i>
+            <i className="fa-solid fa-at fa-2x"></i>
           </a>
         </div>
       </div>

@@ -1,10 +1,9 @@
-function ImageCard({ title, date, urlImage }) {
+function ImageCard({ urlImage, alt, caption }) {
   return (
-    <div className="icard">
-      <span className="icard-title">{title}</span>
-      <span className="icard-date">{date}</span>
-      <img src={urlImage} alt="illustration de la carte" />
-    </div>
+    <figure className="icard">
+      <img src={urlImage} alt={alt} />
+      <figcaption>{caption}</figcaption>
+    </figure>
   );
 }
 

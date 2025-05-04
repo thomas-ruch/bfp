@@ -1,10 +1,11 @@
 import imageBanner from "../../assets/banners/accueil.webp";
-import imageChronicle from "../../assets/chronicles/accueil.webp";
 import TextCard from "../../components/TextCard";
 import PageTitle from "../../components/PageTitle";
 import Subtitle from "../../components/Subtitle";
+import logBook from "../../datas/logbook.json";
 
 function Home() {
+  const log = logBook[0];
   return (
     <div id="home-main">
       <PageTitle title="Le Bureau Français du Panache" urlImage={imageBanner} />
@@ -24,12 +25,10 @@ function Home() {
       </div>
       <Subtitle text="La dernière chronique parue" />
       <TextCard
-        title="Titre de la chronique"
-        date="Mardi 8 avril 2025"
-        urlImage={imageChronicle}
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title={log.title}
+        date={log.logDate}
+        urlImage={log.urlImage}
+        content={log.content}
       />
     </div>
   );

@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 function ArchiveCard({ id, cover }) {
   return (
-    <div className="archive-card">
-      <img src={cover} alt={`${id} cover`} />
-    </div>
+    <li className="archive-card">
+      <Link to={`/archive/${id}`}>
+        <img src={cover} alt={`${id} cover`} />
+      </Link>
+    </li>
   );
 }
 

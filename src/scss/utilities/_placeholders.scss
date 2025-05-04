@@ -17,3 +17,13 @@
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
 }
+
+%hover-shadow {
+  background-color: darken(var.$color-bg-secondary, 10%);
+}
+
+%active-push {
+  transform: scale(0.98);
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}

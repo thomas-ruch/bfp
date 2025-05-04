@@ -1,19 +1,35 @@
 import imageBanner from "../../assets/banners/biblio.webp";
-import imageChronicle from "../../assets/chronicles/accueil.webp";
-import ImageCard from "../../components/ImageCard";
+import LogCard from "../../components/LogCard";
 import CustomButton from "../../components/CustomButton";
 import PageTitle from "../../components/PageTitle";
+import logbook from "../../datas/logbook.json";
+import { useState } from "react";
 
 function LogBook() {
+  const [visibleLogs, setVisibleLogs] = useState(5);
+
   return (
     <div id="logbook-main">
       <PageTitle title="Les chroniques du Panache" urlImage={imageBanner} />
-      <ImageCard
-        title="Titre de la chronique"
-        date="Mardi 8 avril 2025"
-        urlImage={imageChronicle}
-      />
-      <CustomButton text="Charger plus" />
+      <ul id="logbook-cards">
+        {logbook
+          .slice(0, visibleLogs)
+          .map(({ id, title, logDate, urlImage, alt }) => (
+            <LogCard
+              key={id}
+              id={id}
+              title={title}
+              date={logDate}
+              urlImage={urlImage}
+              alt={alt}
+            />
+          ))}
+      </ul>
+      {logbook.length > visibleLogs && (
+        <CustomButton onClick={() => setVisibleLogs((prev) => prev + 5)}>
+          Afficher plus
+        </CustomButton>
+      )}{" "}
     </div>
   );
 }

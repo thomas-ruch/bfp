@@ -1,14 +1,25 @@
-.archive-card, .custom-button, .icard {
+.archive-card, .custom-button, .lcard, figure {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.archive, .tcard {
+#archive-main .archive-secondary, .tcard {
   box-shadow: 10px 10px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.icard-title, .icard-date {
+.lcard .lcard-title,
+.lcard .lcard-date, figure figcaption {
   color: #ffffff;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.custom-button:hover {
+  background-color: #738270;
+}
+
+.custom-button:active, .lcard:active {
+  transform: scale(0.98);
+  box-shadow: none;
+  transform: translate(5px, 5px);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -152,15 +163,18 @@ body {
   font-size: 24px;
   background-color: #ca9d2b;
   color: black;
+  background-image: url("/assets/textures/linen.png");
 }
 
 #main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 main {
+  flex: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -175,7 +189,22 @@ main {
   text-decoration: underline;
 }
 
+.centered {
+  margin: auto;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: unset;
+}
+
 @media (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
   .conditionnal-break {
     display: unset;
   }
@@ -187,7 +216,7 @@ header {
   align-items: center;
   background-color: #8d9b8a;
   font-family: "Abril Fatface";
-  font-size: 40px;
+  font-size: 36px;
   height: 70px;
   position: sticky;
   top: 0;
@@ -217,7 +246,7 @@ footer {
   display: flex;
   justify-content: center;
   height: 100px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #8d9b8a;
 }
 footer a {
@@ -245,7 +274,30 @@ footer .footer-main .footer-icons {
   justify-content: space-between;
   gap: 10px;
 }
+footer .footer-main .footer-icons i {
+  transition: color 0.3s ease;
+}
+footer .footer-main .footer-icons a:hover i {
+  color: #f9f9f9;
+}
 
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+    height: 100%;
+  }
+  footer .footer-main {
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    height: 100%;
+  }
+  footer .footer-main .footer-icons {
+    width: 100%;
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+}
 .banner {
   width: 80%;
   display: flex;
@@ -259,17 +311,31 @@ footer .footer-main .footer-icons {
   width: 83%;
 }
 
+@media (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 100%;
+  }
+  .banner img {
+    width: 100%;
+  }
+}
 .subtitle {
   display: block;
-  width: 750px;
   margin: 15px 0;
   text-align: center;
   font-family: "Abril Fatface";
   font-size: 36px;
   border-bottom: 2px solid #6f4b4d;
-  padding-bottom: 10px;
+  padding: 0 50px 10px 50px;
 }
 
+@media (max-width: 768px) {
+  .subtitle {
+    width: 60%;
+    font-size: 32px;
+  }
+}
 .tcard {
   display: flex;
   flex-direction: column;
@@ -305,7 +371,26 @@ footer .footer-main .footer-icons {
   padding-left: 15px;
 }
 
-.icard {
+@media (max-width: 768px) {
+  .tcard {
+    border-radius: unset;
+    border: unset;
+    padding: 15px;
+    box-shadow: none;
+  }
+  .tcard-title {
+    font-size: 24px;
+  }
+  .tcard-date,
+  .tcard-content {
+    font-size: 20px;
+  }
+  .tcard-content {
+    border: unset;
+    padding-left: unset;
+  }
+}
+figure {
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
@@ -316,43 +401,83 @@ footer .footer-main .footer-icons {
   border: 2px solid #6f4b4d;
   position: relative;
 }
-.icard img {
+figure img {
   width: 100%;
   height: 100%;
   border-radius: 17px;
   object-fit: cover;
 }
+figure figcaption {
+  font-size: 18px;
+  font-family: "Josefin Sans";
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
 
-.icard-title {
+.lcard {
+  position: relative;
+  width: 50%;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #6f4b4d;
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+}
+.lcard:hover {
+  filter: brightness(0.7);
+}
+.lcard a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.lcard img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  z-index: 0;
+  transition: filter 0.3s ease;
+}
+.lcard .lcard-title,
+.lcard .lcard-date {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+  color: white;
+}
+.lcard .lcard-title {
+  bottom: 22%;
   font-size: 36px;
   font-family: "Abril Fatface";
-  position: absolute;
-  bottom: 20%;
-  left: 20px;
 }
-
-.icard-date {
-  position: absolute;
+.lcard .lcard-date {
   bottom: 6%;
-  left: 20px;
 }
 
+@media (max-width: 768px) {
+  .subtitle {
+    width: 60%;
+    font: 32px;
+  }
+}
 .custom-button {
   background-color: #8d9b8a;
   border-radius: 30px;
   border: 2px solid #6f4b4d;
   padding: 3px 40px;
-  margin: 25px;
+  margin: 30px;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
-.custom-button:hover {
-  background-color: #738270;
-}
-.custom-button:active {
-  transform: scale(0.98);
-  box-shadow: none;
-}
-
 .archive-card {
   border: 2px solid #6f4b4d;
   margin-right: 25px;
@@ -377,34 +502,100 @@ footer .footer-main .footer-icons {
   box-shadow: none;
 }
 
-.page-title-wrapper {
+@media (max-width: 768px) {
+  .archive-card {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    box-shadow: unset;
+  }
+}
+.page-title-main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.page-title-wrapper h1 {
-  width: 750px;
+.page-title-main h1 {
   margin: 20px 0;
   text-align: center;
   font-family: "Abril Fatface";
   font-size: 36px;
   border-bottom: 2px solid #6f4b4d;
-  padding-bottom: 10px;
+  padding: 0 50px 10px 50px;
 }
 
-.archive {
+@media (max-width: 768px) {
+  .page-title-main h1 {
+    width: 60%;
+    font-size: 32px;
+  }
+}
+#archive-main {
   display: flex;
   flex-direction: column;
-  background-color: #f9f9f9;
-  background-image: url("/assets/textures/arches.png");
+  align-items: center;
+  margin-top: 50px;
+}
+#archive-main .archive-id {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+#archive-main .archive-id .archive-ref {
+  background-color: #c9a573;
+  background-image: url("/assets/textures/white-paperboard.png");
+  padding: 10px;
+  padding-bottom: 0;
+  font-weight: 500;
+  width: fit-content;
+  border: 1px solid #6f4b4d;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: -1px;
+  z-index: 10;
+  position: relative;
+}
+#archive-main .archive-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #c9a573;
+  background-image: url("/assets/textures/white-paperboard.png");
   background-repeat: repeat;
   background-size: auto;
-  max-width: 800px;
-  border-radius: 20px;
+  max-width: 1000px;
+  border-radius: 0 15px 15px;
   padding: 30px;
-  margin-bottom: 30px;
-  border: 3px solid #6f4b4d;
+  margin-bottom: 10px;
+  border: 1px solid #6f4b4d;
+}
+#archive-main .archive-secondary .archive-meta {
+  padding: 20px;
+  background-color: #f9f9f9;
+  background-image: url("/assets/textures/lined-paper.png");
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+#archive-main .archive-secondary .archive-meta h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+}
+#archive-main .archive-secondary .archive-intro {
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+#archive-main .archive-secondary .archive-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+#archive-main .archive-secondary .archive-content p {
+  margin-bottom: 12px;
 }
 
 #home-main {
@@ -412,6 +603,7 @@ footer .footer-main .footer-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 #home-main #home-intro {
   margin: 0 0 30px 0;
@@ -426,6 +618,7 @@ footer .footer-main .footer-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 #manifesto-main #manifesto-intro {
   margin: 0 0 30px 0;
@@ -448,10 +641,18 @@ footer .footer-main .footer-icons {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 30px;
 }
 #archives-main #archives-cards {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+
+#log-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

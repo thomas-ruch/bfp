@@ -1,4 +1,14 @@
-function CustomButton({ text, onClick }) {
+import { Link } from "react-router-dom";
+
+function CustomButton({ children, onClick, to }) {
+  if (to) {
+    return (
+      <Link to={to} className="custom-button">
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <div
       role="button"
@@ -7,9 +17,9 @@ function CustomButton({ text, onClick }) {
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") onClick(e);
       }}
-      className={`custom-button`}
+      className="custom-button centered"
     >
-      {text}
+      {children}
     </div>
   );
 }

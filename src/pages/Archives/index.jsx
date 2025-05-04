@@ -1,23 +1,26 @@
-import archives from "../../datas/archives-shelves.json";
+import archives from "../../datas/archives.json";
 import imageBanner from "../../assets/banners/stock.webp";
 import ArchiveCard from "../../components/ArchiveCard";
 import CustomButton from "../../components/CustomButton";
 import PageTitle from "../../components/PageTitle";
-import archiveData from "../../datas/archives.json";
-import Archive from "../../components/Archive";
+import { useState } from "react";
 
 function Archives() {
-  const archive = archiveData[0];
+  const [visibleArchives, setVisibleArchives] = useState(7);
+
   return (
     <div id="archives-main">
       <PageTitle title="Les archives du BFP" urlImage={imageBanner} />
-      <div id="archives-cards">
-        {archives.map(({ id, cover }) => (
-          <ArchiveCard key={id} cover={cover} />
+      <ul id="archives-cards">
+        {archives.slice(0, visibleArchives).map(({ id, cover }) => (
+          <ArchiveCard key={id} id={id} cover={cover} />
         ))}
-      </div>
-      <CustomButton text="Charger plus" />
-      <Archive data={archive} />
+      </ul>
+      {archives.length > visibleArchives && (
+        <CustomButton onClick={() => setVisibleArchives((prev) => prev + 7)}>
+          Afficher plus
+        </CustomButton>
+      )}
     </div>
   );
 }
