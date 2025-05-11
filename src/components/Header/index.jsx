@@ -9,13 +9,19 @@ function Header() {
           to="/"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Accueil
+          <span className="nav-icon">
+            <i className="fa-solid fa-house"></i>
+          </span>
+          <span className="nav-text">Accueil</span>
         </NavLink>
         <NavLink
           to="/manifesto"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Manifeste
+          <span className="nav-icon">
+            <i className="fa-solid fa-scroll"></i>
+          </span>
+          <span className="nav-text">Manifeste</span>
         </NavLink>
         <NavLink to="/">
           <img src={logo} alt="logo BFP" />
@@ -24,13 +30,19 @@ function Header() {
           to="/logBook"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Chroniques
+          <span className="nav-icon">
+            <i className="fa-solid fa-book-open"></i>
+          </span>
+          <span className="nav-text">Chroniques</span>
         </NavLink>
         <NavLink
           to="/archives"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Archives
+          <span className="nav-icon">
+            <i className="fa-solid fa-box-archive"></i>
+          </span>
+          <span className="nav-text">Archives</span>
         </NavLink>
       </nav>
     </header>

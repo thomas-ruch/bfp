@@ -7,7 +7,7 @@ function Footer() {
         </div>
         <div className="footer-legal-notice">
           <span>
-            © RustineMan -
+            © RustineMan,
             <br className="conditionnal-break" />
             Tous droits réservés
           </span>

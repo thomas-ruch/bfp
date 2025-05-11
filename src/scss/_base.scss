@@ -133,12 +133,19 @@ table {
 
 //-------------------
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: utils.$font-secondary;
   font-size: utils.$font-size-body;
   background-color: utils.$color-bg-primary;
   color: utils.$color-txt-primary;
   background-image: url("/assets/textures/linen.png");
+  box-sizing: border-box;
 }
 
 #main-container {

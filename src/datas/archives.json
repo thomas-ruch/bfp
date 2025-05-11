@@ -35,5 +35,42 @@
         "text": "Après divers bidouillages, nous finîmes par atteindre une installation secrète, cachée sous la montagne. Elle était l’œuvre d’une ancienne race extra-terrestre qui, à l’instar du Dr Evil, s’étaient congelés pour leur permettre de survivre à une catastrophe naturelle. C’est tout simplement le système de protection de la base secrète qui scannait les peurs des intrus et synthétisait les créatures idoines : des démons pour les croyants, des klingons pour Kirk. Comme pour toute installation secréte, la remettre en route se faisait par une simple pression sur un gros bouton rouge… En fait, non. Comme de bien entendu il fallu d’abord résoudre un puzzle !"
       }
     ]
+  },
+  {
+    "id": "A25-002",
+    "title": "Rex Nebular and the cosmic gender-bender",
+    "cover": "/images/archives/A25/002/RexN_tranche.jpg",
+    "game": "Rex Nebular and the cosmic gender-bender",
+    "archiveDate": "1994",
+    "publicationDate": "10/05/2025",
+    "intro": "'Raise the shields !' Téléporté sur le pont de l’Enterprise, c’est avec ces quelques mots que moi, RustineMan, jeune recrue totalement bilingue du Bureau Français du Panache, débutait ma première mission. Et autant l’annoncer tout de suite, les Ricains en avaient bien besoin.",
+    "mainImage": {
+      "src": "/images/archives/A25/002/rex_001.jpg",
+      "alt": "Jaquette du jeu Star Trek 25th Anniversary"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Le père Kirk et son assistant aux grandes oreilles avaient l’air perdu et leur mutisme, aussi bizarre que cela puisse paraître, en disait long. Engagés dans un combat d’entraînement avec un autre vaisseau de la Fédération, les astronautes en pyjama finirent par reprendre leurs esprits et remportèrent la victoire. Les choses sérieuses pouvaient commencer. Mon rôle était d’accompagner l’équipage du NCC-1701A dans une série de missions aux confins de l’espace connu afin d’explorer d’étranges et nouveaux mondes. La première de celle-ci m’emmènera d’ailleurs sur Pollux V, la planète enchantée des mormons. En effet, même au 24ème siècle, il y aura des gens qui prôneront le retour à la nature et à l’essentiel mais comme l’univers est vaste, ils pourront le faire sur une planète entière et plus seulement dans un état américain. Toujours est-il que ces gens voyaient des démons et Starfleet se devait d’enquêter."
+      },
+      {
+        "type": "paragraph",
+        "text": "Une fois débarqués sur la planète, Kirk, Spock, McCoy et moi-même, nous commençâmes immédiatement l’interrogatoire des locaux. La sénilité de Kirk ne faisait plus aucun doute. Il fallait tout lui indiquer : à qui parler, quelle réponse donner. Il s’avérait qu’effectivement des démons avaient été aperçus à plusieurs endroits. Mais leurs descriptions étaient différentes selon les individus ; un loup pour l’un, un diable pour l’autre, un hipster pour le troisième… Manifestement les indigènes ne nous seraient pas d’une grande aide. Pour en apprendre plus, nous décidâmes de poursuivre l’exploration des lieux. "
+      },
+      {
+        "type": "image",
+        "src": "/images/archives/A25/002/rex_002.jpg",
+        "alt": "Capture d’écran du pont de l’Enterprise",
+        "caption": "Rex dans son vaisseau."
+      },
+      {
+        "type": "paragraph",
+        "text": "Plus tard, le summum serait atteint lorsque trois klingons (à prononcer à la française s’il vous plaît) apparurent devant nous. Sans la vista d’un RustineMan, les trekkies finissaient en poussière d’étoile. C’est ainsi que nos trois neurasthéniques Idem pour ses coéquipiers, pas d’initiative et dans le cas du Dr McCoy ça frôlait même la non assistance à personne en danger quand nous aperçûmes, coincés sous deux tonnes de rochers, un pauvre indigène en mal de soins."
+      },
+      {
+        "type": "paragraph",
+        "text": "Après divers bidouillages, nous finîmes par atteindre une installation secrète, cachée sous la montagne. Elle était l’œuvre d’une ancienne race extra-terrestre qui, à l’instar du Dr Evil, s’étaient congelés pour leur permettre de survivre à une catastrophe naturelle. C’est tout simplement le système de protection de la base secrète qui scannait les peurs des intrus et synthétisait les créatures idoines : des démons pour les croyants, des klingons pour Kirk. Comme pour toute installation secréte, la remettre en route se faisait par une simple pression sur un gros bouton rouge… En fait, non. Comme de bien entendu il fallu d’abord résoudre un puzzle !"
+      }
+    ]
   }
 ]

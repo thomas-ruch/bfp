@@ -2,8 +2,8 @@
 
 .lcard {
   position: relative;
-  width: 50%;
-  height: 200px;
+  width: 60%;
+  height: 180px;
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid utils.$color-border;
@@ -60,8 +60,34 @@
 }
 
 @media (max-width: utils.$small-screen-width) {
-  .subtitle {
-    width: 60%;
-    font: utils.$font-size-ss-title1;
+  .lcard {
+    width: 90%;
+    height: auto;
+    background-image: url("/assets/textures/arches.png");
+
+    a {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    .lcard-title,
+    .lcard-date {
+      position: static;
+      color: utils.$color-txt-primary; // si fond clair, texte blanc ne sera pas visible
+      margin: 3px 10px;
+      text-shadow: none;
+    }
+
+    .lcard-title {
+      font-size: utils.$font-size-ss-title2;
+    }
   }
 }

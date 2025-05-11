@@ -1,16 +1,17 @@
 @use "../../scss/utils";
 
 figure {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: utils.$color-bg-tertiary;
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   height: 200px;
   border-radius: 20px;
   margin-bottom: 30px;
   border: 2px solid utils.$color-border;
   @extend %shadow-small;
-  position: relative;
 
   img {
     width: 100%;
@@ -26,5 +27,11 @@ figure {
     bottom: 10px;
     left: 20px;
     @extend %text-outline;
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  figure {
+    height: 150px;
   }
 }

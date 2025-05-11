@@ -12,6 +12,10 @@
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+.page-title-main h1, .subtitle {
+  text-shadow: 2px 2px 3px rgba(75, 75, 75, 0.8);
+}
+
 .custom-button:hover {
   background-color: #738270;
 }
@@ -158,12 +162,19 @@ table {
   border-spacing: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Josefin Sans";
   font-size: 24px;
   background-color: #ca9d2b;
   color: black;
   background-image: url("/assets/textures/linen.png");
+  box-sizing: border-box;
 }
 
 #main-container {
@@ -232,15 +243,29 @@ header nav {
 }
 header nav a {
   display: flex;
-  color: black;
+  color: #261341;
   text-decoration: none;
   height: 100%;
   align-items: center;
+}
+header nav a .nav-icon {
+  display: none;
+}
+header nav a .nav-text {
+  display: inline;
 }
 header nav img {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  header nav a .nav-icon {
+    display: inline;
+  }
+  header nav a .nav-text {
+    display: none;
+  }
+}
 footer {
   width: 100%;
   display: flex;
@@ -248,9 +273,10 @@ footer {
   height: 100px;
   font-size: 18px;
   background-color: #8d9b8a;
+  color: #261341;
 }
 footer a {
-  color: black;
+  color: #261341;
   text-decoration: none;
 }
 footer .footer-main {
@@ -292,16 +318,26 @@ footer .footer-main .footer-icons a:hover i {
     font-size: 14px;
     height: 100%;
   }
+  footer .footer-main .footer-citation {
+    order: 1;
+  }
   footer .footer-main .footer-icons {
+    order: 2;
     width: 100%;
-    margin: 0 20px;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 10px 0;
+    gap: 60%;
+  }
+  footer .footer-main .footer-legal-notice {
+    order: 3;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
 .banner {
   width: 80%;
   display: flex;
-  height: 200px;
+  height: 160px;
   justify-content: center;
   border-top: 3px solid #6f4b4d;
   border-bottom: 3px solid #6f4b4d;
@@ -332,8 +368,10 @@ footer .footer-main .footer-icons a:hover i {
 
 @media (max-width: 768px) {
   .subtitle {
-    width: 60%;
+    width: 100%;
     font-size: 32px;
+    padding: 0 10px 10px;
+    border: none;
   }
 }
 .tcard {
@@ -391,15 +429,16 @@ footer .footer-main .footer-icons a:hover i {
   }
 }
 figure {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   height: 200px;
   border-radius: 20px;
   margin-bottom: 30px;
   border: 2px solid #6f4b4d;
-  position: relative;
 }
 figure img {
   width: 100%;
@@ -415,10 +454,15 @@ figure figcaption {
   left: 20px;
 }
 
+@media (max-width: 768px) {
+  figure {
+    height: 150px;
+  }
+}
 .lcard {
   position: relative;
-  width: 50%;
-  height: 200px;
+  width: 60%;
+  height: 180px;
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid #6f4b4d;
@@ -463,9 +507,31 @@ figure figcaption {
 }
 
 @media (max-width: 768px) {
-  .subtitle {
-    width: 60%;
-    font: 32px;
+  .lcard {
+    width: 90%;
+    height: auto;
+    background-image: url("/assets/textures/arches.png");
+  }
+  .lcard a {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .lcard img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  .lcard .lcard-title,
+  .lcard .lcard-date {
+    position: static;
+    color: black;
+    margin: 3px 10px;
+    text-shadow: none;
+  }
+  .lcard .lcard-title {
+    font-size: 24px;
   }
 }
 .custom-button {
@@ -504,10 +570,7 @@ figure figcaption {
 
 @media (max-width: 768px) {
   .archive-card {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-    box-shadow: unset;
+    height: 400px;
   }
 }
 .page-title-main {
@@ -515,6 +578,7 @@ figure figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 }
 .page-title-main h1 {
   margin: 20px 0;
@@ -527,15 +591,22 @@ figure figcaption {
 
 @media (max-width: 768px) {
   .page-title-main h1 {
-    width: 60%;
+    width: 100%;
+    padding: 0 10px 10px;
     font-size: 32px;
+    border: none;
   }
 }
 #archive-main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   margin-top: 50px;
+}
+#archive-main .archive-id,
+#archive-main .archive-secondary {
+  max-width: 1000px;
 }
 #archive-main .archive-id {
   width: 100%;
@@ -557,6 +628,7 @@ figure figcaption {
   position: relative;
 }
 #archive-main .archive-secondary {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -564,7 +636,6 @@ figure figcaption {
   background-image: url("/assets/textures/white-paperboard.png");
   background-repeat: repeat;
   background-size: auto;
-  max-width: 1000px;
   border-radius: 0 15px 15px;
   padding: 30px;
   margin-bottom: 10px;
@@ -587,17 +658,43 @@ figure figcaption {
 #archive-main .archive-secondary .archive-intro {
   font-weight: 700;
   margin-bottom: 24px;
+  text-align: justify;
+}
+#archive-main .archive-secondary .archive-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 #archive-main .archive-secondary .archive-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  text-align: justify;
 }
 #archive-main .archive-secondary .archive-content p {
   margin-bottom: 12px;
 }
 
+@media (max-width: 768px) {
+  #archive-main .archive-id .archive-ref {
+    border-left: 0;
+  }
+  #archive-main .archive-secondary {
+    box-shadow: none;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 15px;
+  }
+  #archive-main .archive-secondary .archive-meta {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #archive-main .archive-secondary .archive-meta h2 {
+    font-size: 24px;
+  }
+}
 #home-main {
   width: 100%;
   display: flex;
@@ -629,6 +726,9 @@ figure figcaption {
 }
 
 #logbook-main {
+  width: 100%;
+}
+#logbook-main #logbook-cards {
   width: 100%;
   display: flex;
   flex-direction: column;

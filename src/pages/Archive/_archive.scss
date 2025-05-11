@@ -3,8 +3,14 @@
 #archive-main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   margin-top: 50px;
+
+  .archive-id,
+  .archive-secondary {
+    max-width: 1000px;
+  }
 
   .archive-id {
     width: 100%;
@@ -27,6 +33,7 @@
     }
   }
   .archive-secondary {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,7 +41,6 @@
     background-image: url("/assets/textures/white-paperboard.png");
     background-repeat: repeat;
     background-size: auto;
-    max-width: 1000px;
     border-radius: 0 15px 15px;
     padding: 30px;
     margin-bottom: 10px;
@@ -60,6 +66,13 @@
     .archive-intro {
       font-weight: 700;
       margin-bottom: 24px;
+      text-align: justify;
+    }
+
+    .archive-image {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
 
     .archive-content {
@@ -67,8 +80,34 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
+      text-align: justify;
+
       p {
         margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  #archive-main {
+    .archive-id .archive-ref {
+      border-left: 0;
+    }
+    .archive-secondary {
+      box-shadow: none;
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+      padding: 15px;
+
+      .archive-meta {
+        font-size: utils.$font-size-ss-small;
+        margin-bottom: 15px;
+
+        h2 {
+          font-size: utils.$font-size-ss-title2;
+        }
       }
     }
   }

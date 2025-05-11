@@ -30,9 +30,6 @@
 
 @media (max-width: utils.$small-screen-width) {
   .archive-card {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-    box-shadow: unset;
+    height: 400px;
   }
 }

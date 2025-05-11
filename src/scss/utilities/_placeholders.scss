@@ -18,6 +18,10 @@
     1px 1px 0 black;
 }
 
+%text-shadow-light {
+  text-shadow: 2px 2px 3px rgba(75, 75, 75, 0.8);
+}
+
 %hover-shadow {
   background-color: darken(var.$color-bg-secondary, 10%);
 }

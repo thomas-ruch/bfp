@@ -23,7 +23,7 @@ function Archive() {
           </div>
 
           <p className="archive-intro">{currentArch.intro}</p>
-          <div className="centered">
+          <div className="archive-image">
             <ImageCard
               urlImage={currentArch.mainImage.src}
               alt={currentArch.mainImage.alt}
@@ -38,7 +38,7 @@ function Archive() {
 
               if (item.type === "image") {
                 return (
-                  <div key={index} className="centered">
+                  <div key={index} className="archive-image">
                     <ImageCard
                       urlImage={item.src}
                       alt={item.alt}

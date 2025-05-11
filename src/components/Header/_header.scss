@@ -23,14 +23,38 @@ header {
 
     a {
       display: flex;
-      color: utils.$color-txt-primary;
+      color: utils.$color-txt-tertiary;
       text-decoration: none;
       height: 100%;
       align-items: center;
+
+      .nav-icon {
+        display: none;
+      }
+
+      .nav-text {
+        display: inline;
+      }
     }
 
     img {
       height: 100%;
+    }
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  header {
+    nav {
+      a {
+        .nav-icon {
+          display: inline;
+        }
+
+        .nav-text {
+          display: none;
+        }
+      }
     }
   }
 }

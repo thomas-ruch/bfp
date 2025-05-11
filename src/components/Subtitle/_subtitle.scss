@@ -8,11 +8,14 @@
   font-size: utils.$font-size-title1;
   border-bottom: 2px solid utils.$color-border;
   padding: 0 50px 10px 50px;
+  @extend %text-shadow-light;
 }
 
 @media (max-width: utils.$small-screen-width) {
   .subtitle {
-    width: 60%;
+    width: 100%;
     font-size: utils.$font-size-ss-title1;
+    padding: 0 10px 10px;
+    border: none;
   }
 }
