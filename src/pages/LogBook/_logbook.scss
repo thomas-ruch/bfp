@@ -1,10 +1,54 @@
-#logbook-main {
-  width: 100%;
+@use "../../scss/utils";
 
-  #logbook-cards {
+.logbook-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logbook-cards {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.logbook-filters {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 20px;
+  
+  .filters {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 3px dashed utils.$color-border;
+  
+    .title-filters {
+      position: absolute;
+      top: -10px;
+      left: 5px;
+      background-color: utils.$color-bg-primary;
+      font-size: utils.$font-size-small;
+      padding: 0 5px;
+      margin: 0;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .logbook-filters {
+
+    .filters {
+      gap: 5px;
+    }
   }
 }

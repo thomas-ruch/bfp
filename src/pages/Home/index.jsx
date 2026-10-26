@@ -1,6 +1,6 @@
 import imageBanner from "../../assets/banners/accueil.webp";
 import TextCard from "../../components/TextCard";
-import PageTitle from "../../components/PageTitle";
+import Banner from "../../components/Banner";
 import Subtitle from "../../components/Subtitle";
 import logBook from "../../datas/logbook.json";
 
@@ -8,7 +8,7 @@ function Home() {
   const log = logBook[0];
   return (
     <div id="home-main">
-      <PageTitle title="Le Bureau Français du Panache" urlImage={imageBanner} />
+      <Banner urlImage={imageBanner}>Le Bureau Français du Panache</Banner>
       <div id="home-intro">
         <p>
           BFP… Des initiales qui ont fait le renom de la France. Émanation
@@ -26,7 +26,9 @@ function Home() {
       <Subtitle text="La dernière chronique parue" />
       <TextCard
         title={log.title}
-        date={log.logDate}
+        date={log.publicationDate}
+        lead={log.lead}
+        tags={log.tags}
         urlImage={log.urlImage}
         content={log.content}
       />

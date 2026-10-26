@@ -1,20 +1,79 @@
 [
   {
     "id": "L25-001",
-    "title": "Titre de la chronique",
-    "logDate": "9 avril 2025",
-    "publicationDate": "10/04/2025",
+    "title": "Titre de la chronique 1",
+    "publicationDate": "2025-04-10T09:00:00+02:00",
+    "status": "published",
+    "tags": [
+      "Culture"
+    ],
     "urlImage": "/images/chronicles/l25-001.webp",
-    "alt": "Vue extérieure du BFP.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
   },
   {
     "id": "L25-002",
-    "title": "Sur le slip",
-    "logDate": "25 avril 2025",
-    "publicationDate": "25/04/2025",
-    "urlImage": "/images/chronicles/l25-001.webp",
-    "alt": "Vue extérieure du BFP.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "title": "Titre de la chronique 2",
+    "publicationDate": "2025-05-10T09:00:00+02:00",
+    "status": "published",
+    "tags": [
+      "Politique"
+    ],
+    "urlImage": "/images/chronicles/l25-002.webp",
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
+  },
+  {
+    "id": "L25-003",
+    "title": "Titre de la chronique 3",
+    "publicationDate": "2025-06-10T09:00:00+02:00",
+    "status": "published",
+    "tags": [
+      "Journal",
+      "Politique"
+    ],
+    "urlImage": "/images/chronicles/l25-003.webp",
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
+  },
+  {
+    "id": "L25-004",
+    "title": "Titre de la chronique 4",
+    "publicationDate": "2025-07-10T09:00:00+02:00",
+    "status": "published",
+    "tags": [],
+    "urlImage": "/images/chronicles/l25-004.webp",
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
+  },
+  {
+    "id": "L25-005",
+    "title": "Titre de la chronique 5",
+    "publicationDate": "2025-08-10T09:00:00+02:00",
+    "status": "draft",
+    "tags": [
+      "Kochersberg"
+    ],
+    "urlImage": "/images/chronicles/l25-005.webp",
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
+  },
+  {
+    "id": "L25-006",
+    "title": "Titre de la chronique 6",
+    "publicationDate": "2026-09-10T09:00:00+02:00",
+    "status": "draft",
+    "tags": [
+      "Sport"
+    ],
+    "urlImage": "/images/chronicles/l25-006.webp",
+    "alt": "Description de l’image principale à compléter.",
+    "lead": "Chapeau de la chronique à compléter.",
+    "content": "Premier paragraphe à compléter.\n\nDeuxième paragraphe à compléter."
   }
 ]

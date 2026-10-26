@@ -2,7 +2,7 @@ import archives from "../../datas/archives.json";
 import imageBanner from "../../assets/banners/stock.webp";
 import ArchiveCard from "../../components/ArchiveCard";
 import CustomButton from "../../components/CustomButton";
-import PageTitle from "../../components/PageTitle";
+import Banner from "../../components/Banner";
 import { useState } from "react";
 
 function Archives() {
@@ -10,7 +10,7 @@ function Archives() {
 
   return (
     <div id="archives-main">
-      <PageTitle title="Les archives du BFP" urlImage={imageBanner} />
+      <Banner urlImage={imageBanner}>Les archives</Banner>
       <ul id="archives-cards">
         {archives.slice(0, visibleArchives).map(({ id, cover }) => (
           <ArchiveCard key={id} id={id} cover={cover} />

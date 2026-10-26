@@ -17,11 +17,15 @@ function Footer() {
             href="https://bsky.app/profile/rustineman.bsky.social"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Retrouver RustineMan sur Bluesky"
           >
-            <i className="fa-brands fa-bluesky fa-2x"></i>
+            <i className="fa-brands fa-bluesky fa-2x" aria-hidden="true"></i>
           </a>
-          <a href="mailto:rustineman@gmail.com">
-            <i className="fa-solid fa-at fa-2x"></i>
+          <a 
+            href="mailto:rustineman@gmail.com"
+            aria-label="Envoyer un courriel à RustineMan"
+          >
+            <i className="fa-solid fa-at fa-2x" aria-hidden="true"></i>
           </a>
         </div>
       </div>

@@ -6,6 +6,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: utils.$color-bg-secondary;
+  @include utils.texture("scratches");
+  border-bottom: 5px solid utils.$color-border;
   font-family: utils.$font-primary;
   font-size: utils.$font-size-header;
   height: 70px;

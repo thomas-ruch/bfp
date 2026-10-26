@@ -1,4 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
+import imageBanner from "../../assets/banners/stock.webp";
+import Banner from "../../components/Banner";
 import archives from "../../datas/archives.json";
 import ImageCard from "../../components/ImageCard";
 import CustomButton from "../../components/CustomButton";
@@ -12,6 +14,7 @@ function Archive() {
 
     return (
       <div id="archive-main">
+        <Banner urlImage={imageBanner}>Les archives</Banner>
         <div className="archive-id">
           <div className="archive-ref">{`Archive ${currentArch.id}`}</div>
         </div>

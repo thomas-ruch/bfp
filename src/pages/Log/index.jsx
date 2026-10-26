@@ -1,4 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
+import imageBanner from "../../assets/banners/biblio.webp";
+import Banner from "../../components/Banner";
 import logBook from "../../datas/logbook.json";
 import TextCard from "../../components/TextCard";
 import CustomButton from "../../components/CustomButton";
@@ -11,10 +13,13 @@ function Log() {
     const log = logBook.find((elem) => elem.id === logId);
 
     return (
-      <div id="log-main">
+      <div className="log-main">
+        <Banner urlImage={imageBanner}>Le journal</Banner>
         <TextCard
           title={log.title}
-          date={log.logDate}
+          date={log.publicationDate}
+          lead={log.lead}
+          tags={log.tags}
           urlImage={log.urlImage}
           content={log.content}
         />

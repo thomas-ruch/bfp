@@ -1,4 +1,5 @@
 @use "./variables" as var;
+@use "sass:color";
 
 %shadow-small {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -12,6 +13,14 @@
   box-shadow: 10px 15px 25px 15px rgba(0, 0, 0, 0.5);
 }
 
+%title-shadow {
+  color: var.$color-txt-secondary;
+  text-shadow:
+    3px 3px 0 #30291f,
+    -1px -1px 0 #30291f,
+    0 3px 6px rgba(0, 0, 0, 0.65);
+}
+
 %text-outline {
   color: var.$color-txt-secondary;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
@@ -23,11 +32,10 @@
 }
 
 %hover-shadow {
-  background-color: darken(var.$color-bg-secondary, 10%);
+  background-color: color.adjust(var.$color-bg-secondary, $lightness: -10%);
 }
 
 %active-push {
-  transform: scale(0.98);
+  transform: translate(5px, 5px) scale(0.98);
   box-shadow: none;
-  transform: translate(5px, 5px);
 }

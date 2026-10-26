@@ -40,12 +40,13 @@
   }
 
   .lcard-title,
-  .lcard-date {
+  .lcard-date,
+  .lcard-tags {
     position: absolute;
     left: 20px;
     z-index: 1;
-    color: white;
-    @extend %text-outline;
+    color: utils.$color-txt-secondary;
+    @extend %title-shadow;
   }
 
   .lcard-title {
@@ -57,13 +58,19 @@
   .lcard-date {
     bottom: 6%;
   }
+
+  .lcard-tags {
+    display: flex;
+    bottom: 75%;
+    gap: 10px;
+  }
 }
 
 @media (max-width: utils.$small-screen-width) {
   .lcard {
     width: 90%;
     height: auto;
-    background-image: url("/assets/textures/arches.png");
+    @include utils.texture("paper");
 
     a {
       display: flex;
@@ -79,15 +86,26 @@
     }
 
     .lcard-title,
-    .lcard-date {
+    .lcard-date,
+    .lcard-tags {
       position: static;
       color: utils.$color-txt-primary; // si fond clair, texte blanc ne sera pas visible
-      margin: 3px 10px;
+      margin: 0px 10px;
       text-shadow: none;
     }
 
     .lcard-title {
+      margin-top: 10px; 
       font-size: utils.$font-size-ss-title2;
+    }
+
+    .lcard-tags {
+      margin: 0 0 10px 10px;
+    }
+
+    .lcard-tag {
+      background-color: inherit;
+      font-size: utils.$font-size-ss-small;
     }
   }
 }

@@ -1,0 +1,19 @@
+@use "../../scss/utils";
+  
+.tag {
+  background-color: utils.$color-bg-tertiary;
+  border-radius: 15px;
+  padding: 3px 10px 0;
+  text-shadow: none;
+  color: utils.$color-txt-primary;
+  border: 3px solid utils.$color-border;
+  font-style: italic;
+  font-size: utils.$font-size-small;
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .tag {
+    font-size: utils.$font-size-ss-small;
+    border-width: 2px;
+  }
+}

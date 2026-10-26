@@ -1,7 +1,8 @@
-function Banner({ urlImage }) {
+function Banner({ children, urlImage }) {
   return (
     <div className="banner">
-      <img src={urlImage} alt="banner" />
+      {urlImage && <img src={urlImage} alt="" />}
+      <h1>{children}</h1>
     </div>
   );
 }

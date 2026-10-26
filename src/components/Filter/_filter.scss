@@ -1,0 +1,25 @@
+@use "../../scss/utils";
+
+.filter {
+    border-radius: 15px;
+    padding: 5px 20px 2px;
+    background-color: utils.$color-bg-primary;
+    border: 3px utils.$color-border solid;
+    font: inherit;
+    font-size: utils.$font-size-small;
+    color: utils.$color-txt-secondary;
+    cursor: pointer;
+
+    &--active {
+        background-color: utils.$color-bg-tertiary;
+        color: utils.$color-txt-primary;
+    }
+}
+
+@media (max-width: utils.$small-screen-width) {
+  .filter {
+    border-width: 2px;
+    font-size: utils.$font-size-ss-body;
+    padding: 2px 15px 1px;
+  }
+}

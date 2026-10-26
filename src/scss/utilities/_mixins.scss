@@ -1,0 +1,16 @@
+// Ajoute une texture répétable sur la couleur de fond d'un élément.
+// Textures disponibles : cardboard, lined-paper, linen, scratches, paper.
+
+@use "sass:list";
+
+@mixin texture($name, $size: auto, $path: "../../assets/textures") {
+  $textures: ("cardboard", "lined-paper", "linen", "scratches", "paper");
+
+  @if not list.index($textures, $name) {
+    @error "Texture inconnue : #{$name}";
+  }
+
+  background-image: url("#{$path}/#{$name}.webp");
+  background-repeat: repeat;
+  background-size: $size;
+}

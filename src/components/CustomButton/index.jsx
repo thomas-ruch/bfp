@@ -4,23 +4,19 @@ function CustomButton({ children, onClick, to }) {
   if (to) {
     return (
       <Link to={to} className="custom-button">
-        {children}
+        <span className="custom-button-text">{children}</span>
       </Link>
     );
   }
 
   return (
-    <div
-      role="button"
-      tabIndex={0}
+    <button
+      type="button"
       onClick={onClick}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") onClick(e);
-      }}
       className="custom-button centered"
     >
-      {children}
-    </div>
+      <span className="custom-button-text">{children}</span>
+    </button>
   );
 }
 

@@ -144,7 +144,7 @@ body {
   font-size: utils.$font-size-body;
   background-color: utils.$color-bg-primary;
   color: utils.$color-txt-primary;
-  background-image: url("/assets/textures/linen.png");
+  @include utils.texture("linen");
   box-sizing: border-box;
 }
 

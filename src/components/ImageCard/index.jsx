@@ -2,7 +2,7 @@ function ImageCard({ urlImage, alt, caption }) {
   return (
     <figure className="icard">
       <img src={urlImage} alt={alt} />
-      <figcaption>{caption}</figcaption>
+      {caption && <figcaption>{caption}</figcaption>}
     </figure>
   );
 }

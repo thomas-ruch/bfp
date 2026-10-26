@@ -5,16 +5,16 @@
   margin: 15px 0;
   text-align: center;
   font-family: utils.$font-primary;
-  font-size: utils.$font-size-title1;
+  font-size: utils.$font-size-title2;
   border-bottom: 2px solid utils.$color-border;
   padding: 0 50px 10px 50px;
-  @extend %text-shadow-light;
+  @extend %title-shadow;
 }
 
 @media (max-width: utils.$small-screen-width) {
   .subtitle {
     width: 100%;
-    font-size: utils.$font-size-ss-title1;
+    font-size: utils.$font-size-ss-title2;
     padding: 0 10px 10px;
     border: none;
   }

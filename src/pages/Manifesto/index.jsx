@@ -1,12 +1,12 @@
 import imageBanner from "../../assets/banners/manifeste.webp";
 import manifesto from "../../datas/manifesto.json";
 import TextCard from "../../components/TextCard";
-import PageTitle from "../../components/PageTitle";
+import Banner from "../../components/Banner";
 
 function Manifesto() {
   return (
     <div id="manifesto-main">
-      <PageTitle title="Le manifeste du Panache" urlImage={imageBanner} />
+      <Banner urlImage={imageBanner}>Le manifeste du Panache</Banner>
       <div id="manifesto-intro">
         <p>
           Le panache n’est pas, comme pourraient le prétendre certains esprits
