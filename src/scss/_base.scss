@@ -144,7 +144,7 @@ body {
   font-size: utils.$font-size-body;
   background-color: utils.$color-bg-primary;
   color: utils.$color-txt-primary;
-  @include utils.texture("linen");
+  @include utils.texture("wallpaper", 5%);
   box-sizing: border-box;
 }
 

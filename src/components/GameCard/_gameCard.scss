@@ -1,6 +1,7 @@
 @use "../../scss/utils";
 
-.archive-card {
+.game-card {
+  padding: 0;
   border: 2px solid utils.$color-border;
   margin-right: 25px;
   cursor: pointer;
@@ -29,7 +30,7 @@
 }
 
 @media (max-width: utils.$small-screen-width) {
-  .archive-card {
+  .game-card {
     height: 400px;
   }
 }

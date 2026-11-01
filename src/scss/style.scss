@@ -3,6 +3,7 @@
 @use "../components/Header/header";
 @use "../components/Footer/footer";
 @use "../components/Banner/banner";
+@use "../components/EpisodeModal/epidoseModal";
 @use "../components/Filter/filter";
 @use "../components/Subtitle/subtitle";
 @use "../components/Tag/tag";
@@ -10,7 +11,7 @@
 @use "../components/ImageCard/imageCard";
 @use "../components/LogCard/logCard";
 @use "../components/CustomButton/customButton";
-@use "../components/ArchiveCard/archiveCard";
+@use "../components/GameCard/gameCard";
 @use "../pages/Archive/archive";
 @use "../pages/Error/error";
 @use "../pages/Home/home";

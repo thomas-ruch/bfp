@@ -4,7 +4,7 @@
 @use "sass:list";
 
 @mixin texture($name, $size: auto, $path: "../../assets/textures") {
-  $textures: ("cardboard", "lined-paper", "linen", "scratches", "paper");
+  $textures: ("cardboard", "lined-paper", "linen", "scratches", "paper", "wallpaper");
 
   @if not list.index($textures, $name) {
     @error "Texture inconnue : #{$name}";

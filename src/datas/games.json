@@ -1,0 +1,30 @@
+[
+  {
+    "id": "star-trek-25th-anniversary",
+    "title": "Star Trek 25th Anniversary",
+    "cover": "/images/games/SS25A_cover.webp",
+    "platform": "PC (DOS)",
+    "developer": "Interplay"
+  },
+  {
+    "id": "rex-nebular",
+    "title": "Rex Nebular and the Cosmic Gender Bender",
+    "cover": "/images/games/RexN_cover.webp",
+    "platform": "PC (DOS)",
+    "developer": "MicroProse"
+  },
+    {
+    "id": "lure-temptress",
+    "title": "Lure of the temptress",
+    "cover": "/images/games/LotT_cover.webp",
+    "platform": "PC (DOS)",
+    "developer": "Revolution Software"
+  },
+  {
+    "id": "conquests-longbow",
+    "title": "Conquests of the Longbow : The Legend of Robin Hood",
+    "cover": "/images/games/CotL_cover.webp",
+    "platform": "PC (DOS)",
+    "developer": "Sierra"
+  }
+]

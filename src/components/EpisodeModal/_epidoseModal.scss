@@ -1,0 +1,50 @@
+@use "../../scss/utils";
+
+.dialog-episode {
+    border: solid 3px utils.$color-border;
+    background-color: utils.$color-bg-tertiary;
+    @include utils.texture("paper");
+    color: utils.$color-txt-primary;
+    width: 700px;
+
+    h2 {
+        font-size: utils.$font-size-title2;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        border-left: 10px solid utils.$color-border;
+        padding-left: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: utils.$color-txt-primary;
+        transition: 250ms;
+    }
+
+    a:hover {
+        font-weight: 700;
+    }
+}
+
+.dialog-episode::backdrop {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+@media (max-width: utils.$small-screen-width) {
+    .dialog-episode {
+        width: 100%;
+    
+        .h2 {
+            font-size: utils.$font-size-ss-title2;
+        }
+
+    }
+}
