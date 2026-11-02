@@ -7,16 +7,18 @@ function TextCard({ title, date, tags, urlImage, alt, lead, content }) {
       <div className="cartridge">
         <div className="cart-first">
           <h2>{title}</h2>
-          {date && <span>
-            {new Date(date).toLocaleDateString("fr-FR", {
-              day: "numeric",
-              month: "long",
-              year: "numeric"
-              })
-            }</span>}
+          {date && (
+            <span>
+              {new Date(date).toLocaleDateString("fr-FR", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </span>
+          )}
         </div>
         <div className="cart-tags">
-          {tags && tags.map((tag) => (<Tag>{tag}</Tag>))}
+          {tags && tags.map((tag) => <Tag>{tag}</Tag>)}
         </div>
       </div>
       {urlImage && <img src={urlImage} alt={alt} />}

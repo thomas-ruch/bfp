@@ -22,7 +22,7 @@ function Archives() {
 
   const selectGame = (gameId) => {
     const gameEpisodes = archives.filter(
-      (archive) => archive.gameId === gameId
+      (archive) => archive.gameId === gameId,
     );
 
     console.log("Jeu sélectionné :", gameId);
@@ -35,24 +35,25 @@ function Archives() {
     }
   };
 
-  const episodes = archives.filter((archive) => archive.gameId === selectedGameId);
+  const episodes = archives.filter(
+    (archive) => archive.gameId === selectedGameId,
+  );
   const selectedGame = games.find((game) => game.id === selectedGameId);
-
 
   return (
     <div className="archives-main">
       <Banner urlImage={imageBanner}>Les archives</Banner>
       <ul className="archives-cards">
-        {filteredGames
-          .slice(0, visibleGames)
-          .map(({ id, cover }) => (
-            <GameCard
-              key={id}
-              id={id}
-              cover={cover}
-              onClick = {() => {selectGame(id)}}
-            />
-          ))}
+        {filteredGames.slice(0, visibleGames).map(({ id, cover }) => (
+          <GameCard
+            key={id}
+            id={id}
+            cover={cover}
+            onClick={() => {
+              selectGame(id);
+            }}
+          />
+        ))}
       </ul>
       {selectedGame && episodes.length > 1 && (
         <EpisodeModal

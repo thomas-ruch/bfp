@@ -6,6 +6,11 @@
   width: 100%;
   align-items: center;
 
+  .episode-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
   .archive-id,
   .archive-secondary {
     max-width: 1000px;

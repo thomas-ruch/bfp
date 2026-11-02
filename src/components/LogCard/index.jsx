@@ -11,13 +11,13 @@ function LogCard({ id, title, date, urlImage, alt, tags }) {
           {new Date(date).toLocaleDateString("fr-FR", {
             day: "numeric",
             month: "long",
-            year: "numeric"
-            })
-          }
+            year: "numeric",
+          })}
         </span>
         <span className="lcard-tags">
           {tags.map((tag) => (
-            <Tag>{tag}</Tag>))}
+            <Tag>{tag}</Tag>
+          ))}
         </span>
       </Link>
     </li>

@@ -10,11 +10,7 @@ function CustomButton({ children, onClick, to }) {
   }
 
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="custom-button centered"
-    >
+    <button type="button" onClick={onClick} className="custom-button centered">
       <span className="custom-button-text">{children}</span>
     </button>
   );

@@ -21,7 +21,7 @@ function Footer() {
           >
             <i className="fa-brands fa-bluesky fa-2x" aria-hidden="true"></i>
           </a>
-          <a 
+          <a
             href="mailto:rustineman@gmail.com"
             aria-label="Envoyer un courriel à RustineMan"
           >
